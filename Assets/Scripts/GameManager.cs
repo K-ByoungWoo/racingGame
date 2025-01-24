@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MoveButton leftMoveButton;
     [SerializeField] private MoveButton rightMoveButton;
     [SerializeField] private TMP_Text gasText;
+    [SerializeField] private GameObject startPanelPrefab;
+    [SerializeField] private Transform canvasTransform;
     
     // 자동차
     private CarController _carController;
@@ -67,9 +69,9 @@ public class GameManager : MonoBehaviour
         
         // 게임 상태 Start로 변경
         GameState = State.Start;
-        
-        // 게임 시작
-        StartGame();
+
+        // Start Panel 표시
+        ShowStartPanel();
     }
 
     private void Update()
@@ -128,6 +130,19 @@ public class GameManager : MonoBehaviour
         // TODO: 게임 오버 패널 표시
         
     }
+    
+    #region UI
+
+    /// <summary>
+    /// 시작 화면을 표시
+    /// </summary>
+    
+    private void ShowStartPanel()
+    {
+        Instantiate(startPanelPrefab, canvasTransform);
+    }
+    
+    #endregion
     
     #region 도로 생성 및 관리
 

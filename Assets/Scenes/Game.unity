@@ -371,6 +371,7 @@ MonoBehaviour:
   rightMoveButton: {fileID: 1825152647}
   gasText: {fileID: 1751226144}
   startPanelPrefab: {fileID: 1315287161252191978, guid: 2987489177e148f43a62beff420ffbec, type: 3}
+  endPanelPrefab: {fileID: 1315287161252191978, guid: 3d54118795085144aaa6d27a8a27db2f, type: 3}
   canvasTransform: {fileID: 1363699236}
 --- !u!1 &1150342386
 GameObject:
